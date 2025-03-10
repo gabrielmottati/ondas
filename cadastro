@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Ondas - ILAN Church</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner-placeholder.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .content .text,
+        .content iframe {
+            flex: 1;
+            min-width: 300px;
+        }
+        .text {
+            line-height: 1.8;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input,
+        form select,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #333;
+            color: white;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .banner h1 {
+                font-size: 2rem;
+            }
+            .banner p {
+                font-size: 1rem;
+            }
+            .content {
+                flex-direction: column;
+            }
+            form input,
+            form select,
+            form textarea,
+            form button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ILAN Church</div>
+    </header>
+
+    <div class="label-info">
+        <h3>Sobre o Curso Ondas</h3>
+        <p>O curso Ondas é dividido em quatro módulos para auxiliar sua jornada cristã na ILAN Church:</p>
+        <ul>
+            <li><strong>Introdução</strong></li>
+            <li><strong>Ondas 1:</strong> O que é Igreja</li>
+            <li><strong>Ondas 2:</strong> Essenciais do Evangelho</li>
+            <li><strong>Ondas 3:</strong> Descoberta</li>
+            <li><strong>Ondas 4:</strong> Propósito</li>
+        </ul>
+        <p>Participe conosco e fortaleça sua caminhada com Cristo!</p>
+    </div>
+
+    <h1>Cadastro ILAN</h1>
+    <form id="form_cadastro">
+        <label for="nome">Nome:*</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        <label for="bairro">Bairro:</label>
+        <select id="bairro" name="bairro">
+            <option value="Selecione">Selecione</option>
+            <option value="Bairro de Fátima">Bairro de Fátima</option>
+            <option value="Boa Viagem">Boa Viagem</option>
+            <option value="Cachoeiras">Cachoeiras</option>
+            <option value="Centro">Centro</option>
+            <option value="Charitas">Charitas</option>
+            <option value="Gragoatá">Gragoatá</option>
+            <option value="Icaraí">Icaraí</option>
+            <option value="Ingá">Ingá</option>
+            <option value="Jurujuba">Jurujuba</option>
+            <option value="Morro do Estado">Morro do Estado</option>
+            <option value="Pé Pequeno">Pé Pequeno</option>
+            <option value="Ponta d'Areia">Ponta d'Areia</option>
+            <option value="Santa Rosa">Santa Rosa</option>
+            <option value="São Domingos">São Domingos</option>
+            <option value="São Francisco">São Francisco</option>
+            <option value="Viradouro">Viradouro</option>
+            <option value="Vital Brazil">Vital Brazil</option>
+            <option value="Baldeador">Baldeador</option>
+            <option value="Barreto">Barreto</option>
+            <option value="Caramujo">Caramujo</option>
+            <option value="Cubango">Cubango</option>
+            <option value="Engenhoca">Engenhoca</option>
+            <option value="Fonseca">Fonseca</option>
+            <option value="Ilha da Conceição">Ilha da Conceição</option>
+            <option value="Santa Bárbara">Santa Bárbara</option>
+            <option value="Santana">Santana</option>
+            <option value="São Lourenço">São Lourenço</option>
+            <option value="Tenente Jardim">Tenente Jardim</option>
+            <option value="Viçoso Jardim">Viçoso Jardim</option>
+            <option value="Cafubá">Cafubá</option>
+            <option value="Camboinhas">Camboinhas</option>
+            <option value="Engenho do Mato">Engenho do Mato</option>
+            <option value="Itacoatiara">Itacoatiara</option>
+            <option value="Itaipu">Itaipu</option>
+            <option value="Jacaré">Jacaré</option>
+            <option value="Jardim Imbuí">Jardim Imbuí</option>
+            <option value="Maravista">Maravista</option>
+            <option value="Piratininga">Piratininga</option>
+            <option value="Santo Antônio">Santo Antônio</option>
+            <option value="Serra Grande">Serra Grande</option>
+            <option value="Badu">Badu</option>
+            <option value="Cantagalo">Cantagalo</option>
+            <option value="Ititioca">Ititioca</option>
+            <option value="Largo da Batalha">Largo da Batalha</option>
+            <option value="Maceió">Maceió</option>
+            <option value="Maria Paula">Maria Paula</option>
+            <option value="Matapaca">Matapaca</option>
+            <option value="Sapê">Sapê</option>
+            <option value="Vila Progresso">Vila Progresso</option>
+            <option value="Muriqui">Muriqui</option>
+            <option value="Rio do Ouro">Rio do Ouro</option>
+            <option value="Várzea das Moças">Várzea das Moças</option>
+            <option value="Alcântara">Alcântara</option>
+            <option value="Amendoeira">Amendoeira</option>
+            <option value="Anaia">Anaia</option>
+            <option value="Arsenal">Arsenal</option>
+            <option value="Barro Vermelho">Barro Vermelho</option>
+            <option value="Boaçu">Boaçu</option>
+            <option value="Camarão">Camarão</option>
+            <option value="Centro">Centro</option>
+            <option value="Colubandê">Colubandê</option>
+            <option value="Coelho">Coelho</option>
+            <option value="Engenho Pequeno">Engenho Pequeno</option>
+            <option value="Fazenda dos Mineiros">Fazenda dos Mineiros</option>
+            <option value="Galo Branco">Galo Branco</option>
+            <option value="Gradim">Gradim</option>
+            <option value="Guaxindiba">Guaxindiba</option>
+            <option value="Ipiíba">Ipiíba</option>
+            <option value="Itaúna">Itaúna</option>
+            <option value="Jardim Bom Retiro">Jardim Bom Retiro</option>
+            <option value="Jardim Catarina">Jardim Catarina</option>
+            <option value="Jardim Nova República">Jardim Nova República</option>
+            <option value="Laranjal">Laranjal</option>
+            <option value="Marambaia">Marambaia</option>
+            <option value="Marambaia Pequena">Marambaia Pequena</option>
+            <option value="Maria Paula">Maria Paula</option>
+            <option value="Monjolos">Monjolos</option>
+            <option value="Mútua">Mútua</option>
+            <option value="Nova Cidade">Nova Cidade</option>
+            <option value="Pacheco">Pacheco</option>
+            <option value="Paraíso">Paraíso</option>
+            <option value="Porto do Rosa">Porto do Rosa</option>
+            <option value="Porto Novo">Porto Novo</option>
+            <option value="Rio do Ouro">Rio do Ouro</option>
+            <option value="Rocha">Rocha</option>
+            <option value="Sacramento">Sacramento</option>
+            <option value="Santa Luzia">Santa Luzia</option>
+            <option value="Sete Pontes">Sete Pontes</option>
+            <option value="Tenente Jardim">Tenente Jardim</option>
+            <option value="Tribobó">Tribobó</option>
+            <option value="Vila Três">Vila Três</option>
+            <option value="Zé Garoto">Zé Garoto</option>
+            <option value="Selecione">Selecione - Rio de Janeiro</option>
+            <option value="Acari">Acari - Rio de Janeiro</option>
+            <option value="Água Santa">Água Santa - Rio de Janeiro</option>
+            <option value="Alto da Boa Vista">Alto da Boa Vista - Rio de Janeiro</option>
+            <option value="Anchieta">Anchieta - Rio de Janeiro</option>
+            <option value="Andaraí">Andaraí - Rio de Janeiro</option>
+            <option value="Anil">Anil - Rio de Janeiro</option>
+            <option value="Bancários">Bancários - Rio de Janeiro</option>
+            <option value="Bangu">Bangu - Rio de Janeiro</option>
+            <option value="Barra da Tijuca">Barra da Tijuca - Rio de Janeiro</option>
+            <option value="Barra de Guaratiba">Barra de Guaratiba - Rio de Janeiro</option>
+            <option value="Benfica">Benfica - Rio de Janeiro</option>
+            <option value="Bento Ribeiro">Bento Ribeiro - Rio de Janeiro</option>
+            <option value="Bonsucesso">Bonsucesso - Rio de Janeiro</option>
+            <option value="Botafogo">Botafogo - Rio de Janeiro</option>
+            <option value="Brás de Pina">Brás de Pina - Rio de Janeiro</option>
+            <option value="Cachambi">Cachambi - Rio de Janeiro</option>
+            <option value="Cacuia">Cacuia - Rio de Janeiro</option>
+            <option value="Caju">Caju - Rio de Janeiro</option>
+            <option value="Camorim">Camorim - Rio de Janeiro</option>
+            <option value="Campinho">Campinho - Rio de Janeiro</option>
+            <option value="Campo Grande">Campo Grande - Rio de Janeiro</option>
+            <option value="Cascadura">Cascadura - Rio de Janeiro</option>
+            <option value="Catete">Catete - Rio de Janeiro</option>
+            <option value="Catumbi">Catumbi - Rio de Janeiro</option>
+            <option value="Cidade de Deus">Cidade de Deus - Rio de Janeiro</option>
+            <option value="Cidade Nova">Cidade Nova - Rio de Janeiro</option>
+            <option value="Coelho Neto">Coelho Neto - Rio de Janeiro</option>
+            <option value="Colégio">Colégio - Rio de Janeiro</option>
+            <option value="Copacabana">Copacabana - Rio de Janeiro</option>
+            <option value="Cordovil">Cordovil - Rio de Janeiro</option>
+            <option value="Cosme Velho">Cosme Velho - Rio de Janeiro</option>
+            <option value="Cosmos">Cosmos - Rio de Janeiro</option>
+            <option value="Curicica">Curicica - Rio de Janeiro</option>
+            <option value="Del Castilho">Del Castilho - Rio de Janeiro</option>
+            <option value="Deodoro">Deodoro - Rio de Janeiro</option>
+            <option value="Engenho de Dentro">Engenho de Dentro - Rio de Janeiro</option>
+            <option value="Engenho Novo">Engenho Novo - Rio de Janeiro</option>
+            <option value="Flamengo">Flamengo - Rio de Janeiro</option>
+            <option value="Freguesia (Ilha do Governador)">Freguesia (Ilha do Governador) - Rio de Janeiro</option>
+            <option value="Freguesia (Jacarepaguá)">Freguesia (Jacarepaguá) - Rio de Janeiro</option>
+            <option value="Galeão">Galeão - Rio de Janeiro</option>
+            <option value="Gávea">Gávea - Rio de Janeiro</option>
+            <option value="Glória">Glória - Rio de Janeiro</option>
+            <option value="Grajaú">Grajaú - Rio de Janeiro</option>
+            <option value="Grumari">Grumari - Rio de Janeiro</option>
+            <option value="Guadalupe">Guadalupe - Rio de Janeiro</option>
+            <option value="Guaratiba">Guaratiba - Rio de Janeiro</option>
+            <option value="Ipanema">Ipanema - Rio de Janeiro</option>
+            <option value="Inhoaíba">Inhoaíba - Rio de Janeiro</option>
+            <option value="Irajá">Irajá - Rio de Janeiro</option>
+            <option value="Itanhangá">Itanhangá - Rio de Janeiro</option>
+            <option value="Jacarepaguá">Jacarepaguá - Rio de Janeiro</option>
+            <option value="Jardim América">Jardim América - Rio de Janeiro</option>
+            <option value="Jardim Botânico">Jardim Botânico - Rio de Janeiro</option>
+            <option value="Jardim Guanabara">Jardim Guanabara - Rio de Janeiro</option>
+            <option value="Lapa">Lapa - Rio de Janeiro</option>
+            <option value="Laranjeiras">Laranjeiras - Rio de Janeiro</option>
+            <option value="Leblon">Leblon - Rio de Janeiro</option>
+            <option value="Madureira">Madureira - Rio de Janeiro</option>
+            <option value="Maracanã">Maracanã - Rio de Janeiro</option>
+            <option value="Méier">Méier - Rio de Janeiro</option>
+            <option value="Olaria">Olaria - Rio de Janeiro</option>
+            <option value="Paciência">Paciência - Rio de Janeiro</option>
+            <option value="Padre Miguel">Padre Miguel - Rio de Janeiro</option>
+            <option value="Pavuna">Pavuna - Rio de Janeiro</option>
+            <option value="Penha">Penha - Rio de Janeiro</option>
+            <option value="Realengo">Realengo - Rio de Janeiro</option>
+            <option value="Recreio dos Bandeirantes">Recreio dos Bandeirantes - Rio de Janeiro</option>
+            <option value="Santa Cruz">Santa Cruz - Rio de Janeiro</option>
+            <option value="Santa Teresa">Santa Teresa - Rio de Janeiro</option>
+            <option value="Santo Cristo">Santo Cristo - Rio de Janeiro</option>
+            <option value="São Conrado">São Conrado - Rio de Janeiro</option>
+            <option value="Taquara">Taquara - Rio de Janeiro</option>
+            <option value="Tijuca">Tijuca - Rio de Janeiro</option>
+            <option value="Vargem Grande">Vargem Grande - Rio de Janeiro</option>
+            <option value="Vargem Pequena">Vargem Pequena - Rio de Janeiro</option>
+            <option value="Vila Isabel">Vila Isabel - Rio de Janeiro</option>
+            <option value="Vista Alegre">Vista Alegre - Rio de Janeiro</option>
+ 
+        </select>
+        <br><br>
+        
+            <label for="telefone">Telefone:*</label>
+            <input type="tel" id="telefone" name="telefone" required><br><br>
+        
+            <label for="data_nasc">Data de Nascimento:</label>
+            <input type="text" id="data_nasc" name="data_nasc" placeholder="DD/MM/YYYY"><br><br>
+            
+            <script>
+                document.getElementById("data_nasc").addEventListener("input", function(event) {
+                    let value = event.target.value;
+                    
+                    // Remover tudo que não seja número
+                    value = value.replace(/[^0-9]/g, '');
+            
+                    // Adicionar separadores no formato DD/MM/YYYY
+                    if (value.length >= 3) value = value.slice(0, 2) + '/' + value.slice(2);
+                    if (value.length >= 6) value = value.slice(0, 5) + '/' + value.slice(5, 9);
+                    
+                    event.target.value = value;
+                });
+            </script>
+            
+        
+            <label for="conheceu_il">Como conheceu a ILAN?</label>
+            <input type="text" id="conheceu_il" name="conheceu_il"><br><br>
+        
+            <h3>Outros</h3>
+            <textarea id="pedido_oracao_outros" name="pedido_oracao_outros" rows="10" cols="50"></textarea><br><br>
+        
+            <label for="data_visita">Data da Visita:*</label>
+            <input type="text" id="data_visita" name="data_visita" placeholder="DD/MM/YYYY" maxlength="10" required><br><br>
+            
+            <script>
+                document.getElementById("data_visita").addEventListener("input", function(event) {
+                    let value = event.target.value;
+                    
+                    // Remover tudo que não seja número
+                    value = value.replace(/[^0-9]/g, '');
+            
+                    // Adicionar separadores no formato DD/MM/YYYY
+                    if (value.length >= 3) value = value.slice(0, 2) + '/' + value.slice(2);
+                    if (value.length >= 6) value = value.slice(0, 5) + '/' + value.slice(5, 9);
+                    
+                    event.target.value = value;
+                });
+            </script>
+            
+        
+            <label for="cor">Selecione o Status:</label>
+            <select id="cor" name="cor" required>
+                <option value="Vermelha">Cadastro efetuado, aguardando a primeira interação</option>
+                <option value="Azul">Primeira interação realizada, Pastoral realizada</option>
+                <option value="Laranja">Segunda interação, aguardando contato da equipe</option>
+                <option value="Roxo">Segunda interação, realizada pela equipe</option>
+                <option value="Verde">Finalizado</option>
+            </select><br><br>
+        
+            <button type="button" onclick="salvarCadastro()">Salvar</button>
+        </form>
+        
+        <h2>Cadastros Salvos</h2>
+        <table id="tabela_cadastros" border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Data da Visita</th>
+                    <th>Data de Nascimento</th>
+                    <th>Bairro</th>
+                    <th>Como Conheceu</th>
+                    <th>Pedido de Oração</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas serão inseridas aqui -->
+            </tbody>
+        </table>
+        
+        <br>
+        <br>
+        <button onclick="enviarDados()">Baixar Dados</button>
+        
+        <script>
+            // Função para salvar cadastro
+            function salvarCadastro() {
+                const nome = document.getElementById("nome").value;
+                const telefone = document.getElementById("telefone").value;
+                const dataVisita = document.getElementById("data_visita").value;
+                const dataNasc = document.getElementById("data_nasc").value;
+                const bairro = document.getElementById("bairro").value;
+                const conheceuIl = document.getElementById("conheceu_il").value;
+        
+                // Captura os valores dos checkboxes de "Pedido de Oração"
+                const pedidoOracao = [];
+                const checkboxes = document.querySelectorAll("input[name='pedido_oracao[]']:checked");
+                checkboxes.forEach((checkbox) => {
+                    pedidoOracao.push(checkbox.value);
+                });
+        
+                // Captura o valor do campo de "Outros"
+                const pedidoOracaoOutros = document.getElementById("pedido_oracao_outros").value;
+        
+                const status = document.getElementById("cor").value;
+        
+                // Valida se os campos obrigatórios estão preenchidos
+                if (!nome || !telefone || !dataVisita || !dataNasc || bairro === "" || !conheceuIl || pedidoOracao.length === 0 || !status) {
+                    alert("Por favor, preencha todos os campos obrigatórios.");
+                    return;
+                }
+        
+                // Inserir os dados na tabela
+                const tabela = document.getElementById("tabela_cadastros").getElementsByTagName("tbody")[0];
+                const novaLinha = tabela.insertRow();
+        
+                novaLinha.insertCell(0).textContent = nome;
+                novaLinha.insertCell(1).textContent = telefone;
+                novaLinha.insertCell(2).textContent = dataVisita;
+                novaLinha.insertCell(3).textContent = dataNasc;
+                novaLinha.insertCell(4).textContent = bairro;
+                novaLinha.insertCell(5).textContent = conheceuIl;
+                novaLinha.insertCell(6).textContent = pedidoOracao.concat(pedidoOracaoOutros).join(", "); // Exibe os pedidos de oração, incluindo o campo "Outros"
+                novaLinha.insertCell(7).textContent = status;
+                novaLinha.style.backgroundColor = getCorStatus(status);
+        
+                alert("Cadastro salvo com sucesso!");
+                document.getElementById("form_cadastro").reset();
+            }
+        
+           
+            // Função para retornar a cor de status
+            function getCorStatus(status) {
+                const cores = {
+                    "Vermelha": "#FF0000",
+                    "Azul": "#0000FF",
+                    "Laranja": "#FFA500",
+                    "Roxo": "#800080",
+                    "Verde": "#008000"
+                };
+                return cores[status] || "#FFFFFF"; // Retorna a cor ou branco caso não tenha correspondência
+           }
+        
+            // Função para baixar os dados em CSV
+            function baixarCSV(dados, nome) {
+                const cabecalho = ["Nome", "Telefone", "Data Visita", "Data Nascimento", "Bairro", "Conheceu IL", "Pedido de Oração", "Status"];
+                let csvContent = "data:text/csv;charset=utf-8," + cabecalho.join(",") + "\n";
+        
+                // Adiciona os dados da tabela
+                dados.forEach(function(linha) {
+                    csvContent += linha.join(",") + "\n";
+                });
+        
+                // Obter a hora atual para incluir no nome do arquivo
+                const agora = new Date();
+                const horaAtual = agora.getFullYear() + 
+                                  ("0" + (agora.getMonth() + 1)).slice(-2) +
+                                  ("0" + agora.getDate()).slice(-2) + "_" +
+                                  ("0" + agora.getHours()).slice(-2) +
+                                  ("0" + agora.getMinutes()).slice(-2);
+        
+                // Criar o nome do arquivo
+                const nomeArquivo = `ONDAS_${nome}_${horaAtual}.csv`;
+        
+                // Cria um link para download
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", nomeArquivo);
+                link.click();
+            }
+        
+            // Função para coletar os dados da tabela e chamar a função de download
+            function enviarDados() {
+                const nome = document.getElementById("nome").value;
+                const tabela = document.getElementById("tabela_cadastros").getElementsByTagName("tbody")[0];
+                const linhas = Array.from(tabela.rows).map(row => {
+                    return Array.from(row.cells).map(cell => cell.textContent);
+                });
+        
+                // Chama a função para baixar os dados em CSV
+                baixarCSV(linhas, nome);
+            }
+        </script>
+        
+        
+
+</body>
+</html>
