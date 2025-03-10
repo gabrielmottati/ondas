@@ -405,24 +405,25 @@
 																												<button onclick="enviarDados()">Baixar Dados</button>
 																												<script>
             // Função para salvar cadastro
-function salvarCadastro() {
-    const nome = document.getElementById("nome").value;
-    const telefone = document.getElementById("telefone").value;
-    const dataVisita = document.getElementById("data_visita").value;
-    const dataNasc = document.getElementById("data_nasc").value;
-    const bairro = document.getElementById("bairro").value;
-    const conheceuIl = document.getElementById("conheceu_il").value;
+            function salvarCadastro() {
+                const nome = document.getElementById("nome").value;
+                const telefone = document.getElementById("telefone").value;
+                const dataVisita = document.getElementById("data_visita").value;
+                const dataNasc = document.getElementById("data_nasc").value;
+                const bairro = document.getElementById("bairro").value;
+                const conheceuIl = document.getElementById("conheceu_il").value;
         
                  // Captura o valor do campo de "Pedido de Oração"
     const pedidoOracaoOutros = document.getElementById("pedido_oracao_outros").value; // Corrigido aqui
 
-const status = document.getElementById("cor").value;
+    const status = document.getElementById("cor").value;
 
                // Valida se os campos obrigatórios estão preenchidos
-    if (!nome || !telefone || !dataVisita || !dataNasc || bairro === "" || !conheceuIl === 0 || !status) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
-        return;
-    }
+               if (!nome || !telefone || !dataVisita || !dataNasc || bairro === "" || !conheceuIl || !status) {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+    return;
+}
+
         
       // Inserir os dados na tabela
     const tabela = document.getElementById("tabela_cadastros").getElementsByTagName("tbody")[0];
@@ -494,5 +495,5 @@ const status = document.getElementById("cor").value;
                 baixarCSV(linhas, nome);
             }
         </script>
-																											</body>
-																										</html>
+</body>
+</html>
