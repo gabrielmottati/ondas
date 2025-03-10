@@ -343,23 +343,7 @@
             <input type="tel" id="telefone" name="telefone" required><br><br>
         
             <label for="data_nasc">Data de Nascimento:</label>
-            <input type="text" id="data_nasc" name="data_nasc" placeholder="DD/MM/YYYY"><br><br>
-            
-            <script>
-                document.getElementById("data_nasc").addEventListener("input", function(event) {
-                    let value = event.target.value;
-                    
-                    // Remover tudo que não seja número
-                    value = value.replace(/[^0-9]/g, '');
-            
-                    // Adicionar separadores no formato DD/MM/YYYY
-                    if (value.length >= 3) value = value.slice(0, 2) + '/' + value.slice(2);
-                    if (value.length >= 6) value = value.slice(0, 5) + '/' + value.slice(5, 9);
-                    
-                    event.target.value = value;
-                });
-            </script>
-            
+            <input type="date" id="data_nasc" name="data_nasc"><br><br>
         
             <label for="conheceu_il">Como conheceu a ILAN?</label>
             <input type="text" id="conheceu_il" name="conheceu_il"><br><br>
@@ -368,23 +352,7 @@
             <textarea id="pedido_oracao_outros" name="pedido_oracao_outros" rows="10" cols="50"></textarea><br><br>
         
             <label for="data_visita">Data da Visita:*</label>
-            <input type="text" id="data_visita" name="data_visita" placeholder="DD/MM/YYYY" maxlength="10" required><br><br>
-            
-            <script>
-                document.getElementById("data_visita").addEventListener("input", function(event) {
-                    let value = event.target.value;
-                    
-                    // Remover tudo que não seja número
-                    value = value.replace(/[^0-9]/g, '');
-            
-                    // Adicionar separadores no formato DD/MM/YYYY
-                    if (value.length >= 3) value = value.slice(0, 2) + '/' + value.slice(2);
-                    if (value.length >= 6) value = value.slice(0, 5) + '/' + value.slice(5, 9);
-                    
-                    event.target.value = value;
-                });
-            </script>
-            
+            <input type="date" id="data_visita" name="data_visita" required><br><br>
         
             <label for="cor">Selecione o Status:</label>
             <select id="cor" name="cor" required>
@@ -521,8 +489,6 @@
                 baixarCSV(linhas, nome);
             }
         </script>
-        
-        
-
+    
 </body>
 </html>
