@@ -392,50 +392,42 @@
         
         <script>
             // Função para salvar cadastro
-            function salvarCadastro() {
-                const nome = document.getElementById("nome").value;
-                const telefone = document.getElementById("telefone").value;
-                const dataVisita = document.getElementById("data_visita").value;
-                const dataNasc = document.getElementById("data_nasc").value;
-                const bairro = document.getElementById("bairro").value;
-                const conheceuIl = document.getElementById("conheceu_il").value;
+function salvarCadastro() {
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
+    const dataVisita = document.getElementById("data_visita").value;
+    const dataNasc = document.getElementById("data_nasc").value;
+    const bairro = document.getElementById("bairro").value;
+    const conheceuIl = document.getElementById("conheceu_il").value;
         
-                // Captura os valores dos checkboxes de "Pedido de Oração"
-                const pedidoOracao = [];
-                const checkboxes = document.querySelectorAll("input[name='pedido_oracao[]']:checked");
-                checkboxes.forEach((checkbox) => {
-                    pedidoOracao.push(checkbox.value);
-                });
+                 // Captura o valor do campo de "Pedido de Oração"
+    const pedidoOracaoOutros = document.getElementById("pedido_oracao_outros").value; // Corrigido aqui
+
+const status = document.getElementById("cor").value;
+
+               // Valida se os campos obrigatórios estão preenchidos
+    if (!nome || !telefone || !dataVisita || !dataNasc || bairro === "" || !conheceuIl === 0 || !status) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+    }
         
-                // Captura o valor do campo de "Outros"
-                const pedidoOracaoOutros = document.getElementById("pedido_oracao_outros").value;
-        
-                const status = document.getElementById("cor").value;
-        
-                // Valida se os campos obrigatórios estão preenchidos
-                if (!nome || !telefone || !dataVisita || !dataNasc || bairro === "" || !conheceuIl === 0 || !status) {
-                    alert("Por favor, preencha todos os campos obrigatórios.");
-                    return;
-                }
-        
-                // Inserir os dados na tabela
-                const tabela = document.getElementById("tabela_cadastros").getElementsByTagName("tbody")[0];
-                const novaLinha = tabela.insertRow();
-        
-                novaLinha.insertCell(0).textContent = nome;
-                novaLinha.insertCell(1).textContent = telefone;
-                novaLinha.insertCell(2).textContent = dataVisita;
-                novaLinha.insertCell(3).textContent = dataNasc;
-                novaLinha.insertCell(4).textContent = bairro;
-                novaLinha.insertCell(5).textContent = conheceuIl;
-            //    novaLinha.insertCell(6).textContent = pedidoOracao.concat(pedidoOracaoOutros).join(", "); // Exibe os pedidos de oração, incluindo o campo "Outros"
-                novaLinha.insertCell(7).textContent = status;
-                novaLinha.style.backgroundColor = getCorStatus(status);
-        
-                alert("Cadastro salvo com sucesso!");
-                document.getElementById("form_cadastro").reset();
-            }
-        
+      // Inserir os dados na tabela
+    const tabela = document.getElementById("tabela_cadastros").getElementsByTagName("tbody")[0];
+    const novaLinha = tabela.insertRow();
+
+    novaLinha.insertCell(0).textContent = nome;
+    novaLinha.insertCell(1).textContent = telefone;
+    novaLinha.insertCell(2).textContent = dataVisita;
+    novaLinha.insertCell(3).textContent = dataNasc;
+    novaLinha.insertCell(4).textContent = bairro;
+    novaLinha.insertCell(5).textContent = conheceuIl;
+    novaLinha.insertCell(6).textContent = pedidoOracaoOutros; // Exibe o pedido de oração (campo "Outros")
+    novaLinha.insertCell(7).textContent = status;
+    novaLinha.style.backgroundColor = getCorStatus(status);
+
+    alert("Cadastro salvo com sucesso!");
+    document.getElementById("form_cadastro").reset();
+}   
             // Função para retornar a cor de status
             function getCorStatus(status) {
                 const cores = {
