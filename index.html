@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -174,6 +175,8 @@
 								<label for="bairro">Bairro:</label>
 								<select id="bairro" name="bairro">
 									<option value="Selecione">Selecione</option>
+									<option value="Maricá">Maricá</option>
+									<option value="Itaipuaçu">Itaipuaçu</option>
 									<option value="Boa Viagem">Boa Viagem - Niterói</option>
 									<option value="Cachoeiras">Cachoeiras - Niterói</option>
 									<option value="Centro">Centro - Niterói</option>
@@ -267,7 +270,6 @@
 									<option value="Tribobó">Tribobó</option>
 									<option value="Vila Três">Vila Três</option>
 									<option value="Zé Garoto">Zé Garoto</option>
-									<option value="Selecione">Selecione - Rio de Janeiro</option>
 									<option value="Acari">Acari - Rio de Janeiro</option>
 									<option value="Água Santa">Água Santa - Rio de Janeiro</option>
 									<option value="Alto da Boa Vista">Alto da Boa Vista - Rio de Janeiro</option>
@@ -403,8 +405,11 @@
 																										<br>
 																											<br>
 																												<button onclick="enviarDados()">Baixar Dados</button>
-																												<script>
-            // Função para salvar cadastro
+																												&nbsp &nbsp &nbsp <!--<button id="mostrarDados">Mostrar Dados Salvos</button>-->
+
+
+<script>
+	// Função para salvar cadastro
             function salvarCadastro() {
                 const nome = document.getElementById("nome").value;
                 const telefone = document.getElementById("telefone").value;
@@ -494,6 +499,10 @@
                 // Chama a função para baixar os dados em CSV
                 baixarCSV(linhas, nome);
             }
+			
+			document.getElementById("mostrarDados").addEventListener("click", function() {
+    alert("Aqui você pode carregar os dados salvos.");
+});
         </script>
 </body>
 </html>
